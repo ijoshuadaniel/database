@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/header';
+import GlobalProvider from './context';
+import Routes from './components/Routes';
 
-function App() {
+const App = () => {
+  const [signApp, setSignApp] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalProvider>
+      <div>
+        <Routes signApp={signApp} setSignApp={setSignApp} />
+      </div>
+    </GlobalProvider>
   );
-}
+};
 
 export default App;

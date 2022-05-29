@@ -1,0 +1,61 @@
+@import './../../sass-global.scss';
+
+.login {
+  width: 100vw;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $green;
+  &-error {
+    color: red;
+  }
+  &-form {
+    width: 30%;
+    @media only screen and (max-width: 699px) {
+      width: 90% !important;
+    }
+    @media only screen and (min-width: 700px) and (max-width: 1024px) {
+      width: 70% !important;
+    }
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $green;
+    form {
+      background-color: $white;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 0.4rem;
+      box-shadow: 0px 0px 10px 1px rgba($black, 0.2);
+      padding: 4rem;
+      input {
+        margin: 1rem 0;
+        padding: 0.8rem;
+        border-radius: 0.4rem;
+        border: 1px solid $green;
+        outline: 1px solid $green;
+      }
+      input[type='button'] {
+        background-color: $green;
+        color: white;
+        border: 1px solid $green;
+        outline: 1px solid $green;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      h4 {
+        font-size: 1rem;
+        color: $black;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
