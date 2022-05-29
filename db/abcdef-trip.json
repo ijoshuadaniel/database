@@ -1,0 +1,10 @@
+{
+  "database": "trip",
+  "schema": {
+    "id": "string",
+    "tripName": "String",
+    "tripDate": "String",
+    "fare": { "actualPrice": "number", "discountedPrice": "number" }
+  },
+  "data": []
+}
